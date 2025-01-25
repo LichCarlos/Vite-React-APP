@@ -1,0 +1,73 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.G-main {
+  padding: 20px;
+}
+
+.G-fullpage {
+  display: flex;
+  height: 100%;
+}
+
+.G-layout-main {
+  flex: 1;
+  overflow: auto;
+}
+:root
+     // 滚动条样式
+     --theme-scrollbar-color-track: rgb(241,241,241)
+     --theme-scrollbar-color-track-border: rgb(230,230,230)
+     --theme-scrollbar-color-thumb: rgb(193,193,193)
+     --theme-scrollbar-color-thumb-hover: rgb(168,168,168)
+     [theme-mode=dark]
+       --theme-scrollbar-color-track: rgb(44,44,44)
+       --theme-scrollbar-color-track-border: rgb(56,56,56)
+       --theme-scrollbar-color-thumb: rgb(107,107,107)
+       --theme-scrollbar-color-thumb-hover: rgb(115,115,115)
+   
+   /* 全局滚动条样式 */
+   // 滚动条厚度
+   body[os=windows] *::-webkit-scrollbar
+   	width:14px
+   	height:14px
+   // 滚动条（水平+垂直）样式
+   body[os=windows] *::-webkit-scrollbar-track
+   	background: var(--theme-scrollbar-color-track)
+   // 滚动条（水平+垂直）hover样式
+   body[os=windows] *::-webkit-scrollbar-track:hover
+   	background: var(--theme-scrollbar-color-track)
+   // 滚动条（水平）样式
+   body[os="windows"] *::-webkit-scrollbar-track:horizontal
+     border-top: solid 1px var(--theme-scrollbar-color-track-border)
+   // 滚动条（垂直）样式
+   body[os="windows"] *::-webkit-scrollbar-track:vertical 
+     border-left: solid 1px var(--theme-scrollbar-color-track-border)
+   // 滚动滑块（水平+垂直）样式
+   body[os=windows] *::-webkit-scrollbar-thumb
+     background: var(--theme-scrollbar-color-thumb)
+     border-radius: 14px
+     border: 3px solid transparent
+     // 解决滑块边框遮挡滚动条背景边框
+     background-clip: padding-box
+   body[os=windows] *::-webkit-scrollbar-thumb:hover
+     background: var(--theme-scrollbar-color-thumb-hover)
+     // 解决滑块边框遮挡滚动条背景边框
+     background-clip: padding-box
+   // 滚动滑块（水平）样式
+   body[os=windows] *::-webkit-scrollbar-thumb:horizontal
+     // 解决滑块与背景上下边距不统一的问题
+     border-top-width: 4px
+   // 滚动滑块（垂直）样式
+   body[os=windows] *::-webkit-scrollbar-thumb:vertical
+     // 解决滑块与背景左右边距不统一的问题
+     border-left-width: 4px
+   // 滚动条首尾的按钮样式
+   body[os=windows] *::-webkit-scrollbar-button
+   	display:none
+   // 水平和垂直滚动条在页面右下角交叉处产生的空白区域样式
+   body[os=windows] *::-webkit-scrollbar-corner
+     background: var(--theme-scrollbar-color-track)
